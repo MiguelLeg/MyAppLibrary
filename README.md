@@ -1,2 +1,2 @@
 # MyAppLibrary
-app para el manejo del inventario de una biblioteca y sus miembros
+Favor de correr primero el script 'crearDB' para crear la base de datos con sus tablas y metodos
