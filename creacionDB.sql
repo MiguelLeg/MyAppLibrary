@@ -25,8 +25,7 @@ miembro_id INT NOT NULL,
 nombre VARCHAR(80) NOT NULL,
 apellido VARCHAR(80) NOT NULL,
 fecha DATETIME DEFAULT CURRENT_TIMESTAMP,
-estatus VARCHAR (10) NOT NULL,
-FOREIGN KEY (miembro_id) REFERENCES tbl_miembros(miembro_id)
+estatus VARCHAR (10) NOT NULL
 );
 
 DELIMITER ;;

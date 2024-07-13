@@ -33,7 +33,9 @@ public class LibroDAO {
 				}
 			}
 
-		} catch (SQLException exception) {
+		} catch (BatchUpdateException exception) {
+			System.out.println("Entrada duplicada favor de modificar datos");
+		}catch (SQLException exception) {
 			exception.printStackTrace();
 		}
 	}

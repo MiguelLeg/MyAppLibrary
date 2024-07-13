@@ -173,7 +173,12 @@ public class PrincipalMenu {
 				System.out.println("Ingrese el ISBN del libro:\n(Favor de dar doble enter)");
 				ISBN = input.nextLine();
 				input.nextLine();
-				LibroDAO.insertar(titulo, autor, ISBN);
+				if (ISBN.length()>5) {
+					System.out.println("ISBN no valido, use solo 5 caracteres por favor");
+				}
+				else {
+					LibroDAO.insertar(titulo, autor, ISBN);
+				}
 				break;
 			case 4:
 				System.out.println("Ingrese el titulo del libro:\n(Favor de dar doble enter)");
@@ -196,7 +201,6 @@ public class PrincipalMenu {
 		} catch (NoSuchElementException exception) {
 			System.out.println("Favor de ingresar una opcion valida \n");
 		}
-		System.out.println("accion realizada con exito");
 	}
 
 	public static void ManejodeUsuarios(Scanner input) {
